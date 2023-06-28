@@ -122,6 +122,24 @@ class Species(Enum):
 
     ANY = "ANY"
     """Wildcard."""
+    
+class Winner(Enum):
+    """Enumeration type of winner."""
+
+    UNC = "UNC"
+    """Uncertain."""
+
+    VILLAGER = "VILLAGER"
+    """Villager."""
+
+    WEREWOLF = "WEREWOLF"
+    """Werewolf."""
+
+    FOX = "FOX"
+    """Fox."""
+
+    DRAW = "DRAW"
+    """Wildcard."""
 
 
 class Status(Enum):
