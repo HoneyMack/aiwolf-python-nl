@@ -49,7 +49,7 @@ class Agent:
                 return Agent(int(m.group(2)))
         return Agent(0)
 
-    def __new__(cls: type[Agent], idx: int) -> Agent:
+    def __new__(cls: type[Agent], idx: int=0) -> Agent:
         if idx < 0:
             raise ValueError("agent index must not be negative")
         if idx in cls._agent_map.keys():
@@ -121,6 +121,24 @@ class Species(Enum):
     """Werewolf."""
 
     ANY = "ANY"
+    """Wildcard."""
+    
+class Winner(Enum):
+    """Enumeration type of winner."""
+
+    UNC = "UNC"
+    """Uncertain."""
+
+    VILLAGER = "VILLAGER"
+    """Villager."""
+
+    WEREWOLF = "WEREWOLF"
+    """Werewolf."""
+
+    FOX = "FOX"
+    """Fox."""
+
+    DRAW = "DRAW"
     """Wildcard."""
 
 
