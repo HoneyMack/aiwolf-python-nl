@@ -176,7 +176,7 @@ class TcpipClient:
     def _get_json(self) -> str:
         responses = b""
         retry_count = 0
-        max_retry_count = 1e5
+        max_retry_count = 1e7
         while not self._is_json_complate(responses=responses):  
             response = self.sock.recv(8192)
             #待機時間が長いときは、一定回数以上のリトライを許容する        
